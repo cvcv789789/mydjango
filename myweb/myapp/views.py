@@ -8,6 +8,10 @@ def hi(request):
 def hi2(request,username):
     today = datetime.date.today()
    
-    return render(request,'hello3.html',locals())#locals把DEF 裡面的所有變數 打包成字典 
+    return render(request,'hello3.html',{'username':username,'now':today})
+def hi4(request,username):
+    now = datetime.date.today()
+
+    return render(request,'hello4.html',locals())
 def main(request):
     return HttpResponse('<h1>123213</h1>')
