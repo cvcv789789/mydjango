@@ -45,8 +45,7 @@ def show(request):
     for i in range(1,10):
         num1[i]=i
         num2[i]=i
-        for j in range(1,10):
-            total[i][j]=i*j
+ 
             
     return render(request,"show.html",locals())
 
